@@ -26,18 +26,33 @@ let myPhoneserve = new phoneserve.Instance({
     provider:"sipgate" // optional, defaults to sipgate,
     port: "8080" // optional, defaults to 8080, or if taken 8081,8082,8083
     phonenumbers: [ // array of phonenumbers, optional but highly recommended
-        "123456789",
-        "234567891",
-        "345678912"
+        new phoneserve.Phonenumber("main","123456789"),
+        new phoneserve.Phonenumber("support","234567891"),
+        new phoneserve.Phonenumber("ceo","345678912")
     ]
+});
+
+let myDestination = new phoneserve.Destination({
+    
+});
+
+let myVoiceapp = new phoneserve.Voiceapp({
+    introduction:"somepath/to/soundfile.*"; // for soundfile specs see sipgate.io specs
+    options:{
+        0:new phoneserve.Option({
+            voiceapp:myVoiceApp2, // either a voiceapp
+            destination:myDestination // or a destination
+        }),
+        1:new phoneserve.Options({
+            
+        })
+    }
 });
 
 let myRule1 = new phoneserve.Rule({
     //rule params
-});
-
-let myVoiceapp = new phoneserve.Voiceapp({
-    // voiceapp params;
+    toPhonenumber:"ceo",
+    route:myVoiceapp;
 });
 
 myPhoneserve.addRules([myRule1]); //accepts rules. For consistency always requires ":Rule[]" as argument
