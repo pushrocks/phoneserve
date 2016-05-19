@@ -1,6 +1,6 @@
 {
   "name": "phoneserve",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "easily create a server that manages your phonecall routing. Tailored for use with sipgate.io (not official), easy API implementation for sipgate.io (not official), TypeScript ready",
   "main": "dist/index.js",
   "scripts": {
