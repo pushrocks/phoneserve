@@ -1,7 +1,7 @@
 # phoneserve
 easy API implementation for sipgate.io (not official), TypeScript ready
 
-> note: this package is at a very early, expect this to be beta 2016-06-15
+> note: **this package is at a very early stage, expect this to be beta 2016-06-15**
 
 The intention of this package is to easify usage of the awesome sipgate.io API for nodejs.
 
