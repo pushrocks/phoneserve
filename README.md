@@ -43,7 +43,7 @@ let myVoiceapp = new phoneserve.Voiceapp({
             voiceapp:myVoiceApp2, // either a voiceapp
             destination:myDestination // or a destination
         }),
-        1:new phoneserve.Options({
+        1:new phoneserve.Option({
             
         })
     }
