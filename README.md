@@ -10,7 +10,10 @@ The intention of this package is to easify usage of the awesome sipgate.io API f
 
 ## Where does this package belong in your IT chain?
 You should use this package as required package in your own telephony node package.
-This *sipgate* package takes care of providing a request server and simplifies the official sipgate API for you.
+
+## Currently supported providers:
+
+* sipgate.io
 
 ## SSL
 If you want to use SSL don't do it with nodejs, but use nginx with docker for it.
@@ -22,8 +25,8 @@ This package can handle multiple sipgate instances. We highly recommend the use 
 import * as phoneserve from "phoneserve";
 
 let myPhoneserve = new phoneserve.Instance({
+    provider:"sipgate" // mandatory
     name: "company", // optional, will be used for better logs
-    provider:"sipgate" // optional, defaults to sipgate,
     port: "8080" // optional, defaults to 8080, or if taken 8081,8082,8083
     phonenumbers: [ // array of phonenumbers, optional but highly recommended
         new phoneserve.Phonenumber("main","123456789"),

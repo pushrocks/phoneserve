@@ -1,0 +1,5 @@
+"use strict";
+require("typings-global");
+exports.q = require("q");
+exports.smartstring = require("smartstring");
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicGhvbmVzZXJ2ZS5wbHVnaW5zLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vdHMvcGhvbmVzZXJ2ZS5wbHVnaW5zLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQSxRQUFPLGdCQUFnQixDQUFDLENBQUE7QUFDVixTQUFDLFdBQVcsR0FBRyxDQUFDLENBQUM7QUFDakIsbUJBQVcsV0FBVyxhQUFhLENBQUMsQ0FBQyJ9

@@ -19,5 +19,14 @@
   "bugs": {
     "url": "https://github.com/pushrocks/phoneserve/issues"
   },
-  "homepage": "https://github.com/pushrocks/phoneserve#readme"
+  "homepage": "https://github.com/pushrocks/phoneserve#readme",
+  "devDependencies": {
+    "npmts-g": "^5.2.6"
+  },
+  "dependencies": {
+    "@types/q": "0.0.27",
+    "q": "^1.4.1",
+    "smartstring": "^2.0.15",
+    "typings-global": "^1.0.6"
+  }
 }
