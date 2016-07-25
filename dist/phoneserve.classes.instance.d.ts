@@ -1,10 +1,12 @@
-import * as PhoneserveProviders from "./phoneserve.providers";
+import { Provider } from "./phoneserve.classes.provider";
 export interface IInstanceOptions {
-    provider: PhoneserveProviders.EProviderOptions;
-    providerOptions: any;
+    provider: Provider;
     name: string;
     phonenumbers: number[];
 }
 export declare class Instance {
+    provider: Provider;
+    name: string;
+    phonenumbers: number[];
     constructor(optionsArg: IInstanceOptions);
 }
