@@ -23,7 +23,7 @@ This package can handle multiple sipgate instances. We highly recommend the use 
 
 **Terminology:**
 
-* **Instance Class:** An instance is the main class of phoneserve. You can have multiple instances for different for providers.
+* **Instance Class:** An instance is the main class of phoneserve. You can have multiple instances for different providers.
 * **Destination Class** An instance consumes a destination. The destination class is extended by:
     * **Voiceapp Class** A voiceapp routes between multiple destinaion by evaluating user key input. Later on this may be extended with Speechrecognition.
     * **Voicebox Class** A voicebox takes a call plays a greeting and then records the call.
