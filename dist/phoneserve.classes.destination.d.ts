@@ -1,3 +1,7 @@
+export interface IDestinationOptions {
+    name: string;
+}
 export declare class Destination {
-    constructor();
+    name: string;
+    constructor(optionsArg: IDestinationOptions);
 }

@@ -21,44 +21,16 @@ If you want to use SSL don't do it with nodejs, but use nginx with docker for it
 ## Usage
 This package can handle multiple sipgate instances. We highly recommend the use of TypeScript since it supports TpyeScript intellisense.
 
+**Terminology:**
+
+* **Instance Class:** An instance is the main class of phoneserve. You can have multiple instances for different for providers.
+* **Destination Class** An instance consumes a destination. The destination class is extended by:
+    * **Voiceapp Class** A voiceapp routes between multiple destinaion by evaluating user key input. Later on this may be extended with Speechrecognition.
+    * **Rule Class** A rule routes between different destinations by running a evaluator function that returns a destination.
+    * **Group** A group route a call to multiple persons (Implementation is not yet finished) and routes it to another destination if noone picks up;
+    * **Person** 
 ```typescript
 import * as phoneserve from "phoneserve";
-
-let myPhoneserve = new phoneserve.Instance({
-    provider:"sipgate" // mandatory
-    name: "company", // optional, will be used for better logs
-    port: "8080" // optional, defaults to 8080, or if taken 8081,8082,8083
-    phonenumbers: [ // array of phonenumbers, optional but highly recommended
-        new phoneserve.Phonenumber("main","123456789"),
-        new phoneserve.Phonenumber("support","234567891"),
-        new phoneserve.Phonenumber("ceo","345678912")
-    ]
-});
-
-let myDestination = new phoneserve.Destination({
-    
-});
-
-let myVoiceapp = new phoneserve.Voiceapp({
-    introduction:"somepath/to/soundfile.*"; // for soundfile specs see sipgate.io specs
-    options:{
-        0:new phoneserve.Option({
-            voiceapp:myVoiceApp2, // either a voiceapp
-            destination:myDestination // or a destination
-        }),
-        1:new phoneserve.Option({
-            
-        })
-    }
-});
-
-let myRule1 = new phoneserve.Rule({
-    //rule params
-    toPhonenumber:"ceo",
-    route:myVoiceapp;
-});
-
-myPhoneserve.addRules([myRule1]); //accepts rules. For consistency always requires ":Rule[]" as argument
 ```
 
 The key to this package are rules. You can define them programmatically.
