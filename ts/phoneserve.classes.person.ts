@@ -1,12 +1,14 @@
 import * as plugins from "./phoneserve.plugins";
-import {Destination} from "./Destination";
+import { Destination } from "./phoneserve.classes.destination";
 
 export interface IPersonOptions {
-    name:string;
+    name: string;
 }
 
 export class Person extends Destination {
-    constructor(optionsArg:IPersonOptions){
-        super(optionsArg.name);
+    constructor(optionsArg: IPersonOptions) {
+        super({
+            name: optionsArg.name
+        });
     }
 }
