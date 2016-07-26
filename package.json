@@ -1,6 +1,6 @@
 {
   "name": "phoneserve",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "easy API implementation for sipgate.io (not official), TypeScript ready",
   "main": "dist/index.js",
   "scripts": {
