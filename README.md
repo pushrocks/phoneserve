@@ -26,9 +26,13 @@ This package can handle multiple sipgate instances. We highly recommend the use 
 * **Instance Class:** An instance is the main class of phoneserve. You can have multiple instances for different for providers.
 * **Destination Class** An instance consumes a destination. The destination class is extended by:
     * **Voiceapp Class** A voiceapp routes between multiple destinaion by evaluating user key input. Later on this may be extended with Speechrecognition.
+    * **Voicebox Class** A voicebox takes a call plays a greeting and then records the call.
     * **Rule Class** A rule routes between different destinations by running a evaluator function that returns a destination.
-    * **Group** A group route a call to multiple persons (Implementation is not yet finished) and routes it to another destination if noone picks up;
-    * **Person** 
+    * **Group Class** A group routes calls to multiple persons (Implementation is not yet finished) and then (if noone picks up) routes it to another destination if noone picks up;
+    * **Person Class** A person is a person. what more to say... can have multiple lines. 
+
+In other words a call can hop along from destination to destination as long as the call is active.
+
 ```typescript
 import * as phoneserve from "phoneserve";
 ```
